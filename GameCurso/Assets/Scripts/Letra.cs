@@ -10,16 +10,18 @@ public class Letra : MonoBehaviour {
 
 	private Vidas vida;
 	private Score score;
+    private Gerenciador gerenciador;
 
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	
 		score = GameObject.FindGameObjectWithTag("Pontos").GetComponent<Score>() as Score;
+        gerenciador = FindObjectOfType(typeof(Gerenciador)) as Gerenciador;
 
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -53,7 +55,7 @@ public class Letra : MonoBehaviour {
 			}else
 			{
 
-				// gerenciador.GameOver("GameOver");
+				gerenciador.GameOver("GameOver");
 
 			}
 		}

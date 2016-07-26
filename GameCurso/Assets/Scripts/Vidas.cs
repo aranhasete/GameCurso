@@ -4,44 +4,40 @@ using System.Collections;
 public class Vidas : MonoBehaviour {
 
 
-	public Texture2D[] vidaAtual;
-	private int vidas;
-	private int contador;
+    public Texture2D[] textureVida;
+    private int vidas;
+    public int vidasAtual;
 
-	// Use this for initialization
-	void Start () {
-	
-		GetComponent<GUITexture>().texture = vidaAtual [0];
-		vidas = vidaAtual.Length;
+    // Use this for initialization
+    void Start()
+    {
+        GetComponent<GUITexture>().texture = textureVida[0];
+        vidas = textureVida.Length - 1;
+        vidasAtual = vidas;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
 
-	public bool ExcluirVida()
-	{
-		if (vidas < 0) {
-			
-			return false;
-			
-		}
-		
-		if (contador < (vidas - 1)) {
-			
-						contador += 1;
-						GetComponent<GUITexture>().texture = vidaAtual [contador];
-						return true;
-			
-				}
+    public bool ExcluirVida()
+    {
+        if (vidasAtual == 0)
+        {
+            return false;
 
-		else {
+        }
+        else
+        {
+            vidasAtual--;
+            var idTextura = vidas - vidasAtual;
+            GetComponent<GUITexture>().texture = textureVida[idTextura];
+            return true;
 
-			return false;
-		
-		}
-	}
+        }
+    }
 }
