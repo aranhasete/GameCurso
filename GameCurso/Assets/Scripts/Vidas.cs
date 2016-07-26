@@ -11,7 +11,7 @@ public class Vidas : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-		guiTexture.texture = vidaAtual [0];
+		GetComponent<GUITexture>().texture = vidaAtual [0];
 		vidas = vidaAtual.Length;
 
 	}
@@ -33,7 +33,7 @@ public class Vidas : MonoBehaviour {
 		if (contador < (vidas - 1)) {
 			
 						contador += 1;
-						guiTexture.texture = vidaAtual [contador];
+						GetComponent<GUITexture>().texture = vidaAtual [contador];
 						return true;
 			
 				}

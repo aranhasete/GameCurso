@@ -59,7 +59,7 @@ public class Player : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Jump") && isGrounded && !jumped) {
 				
-			rigidbody2D.AddForce(transform.up * force);
+			GetComponent<Rigidbody2D>().AddForce(transform.up * force);
 			jumpTime = jumpDelay;
 			animator.SetTrigger("jump");
 			jumped = true;

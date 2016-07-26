@@ -17,7 +17,7 @@ public class Score : MonoBehaviour {
 
 	void Start () {
 	
-		guiText.text = "Pontos:   " + ponto;
+		GetComponent<GUIText>().text = "Pontos:   " + ponto;
 	
 	}
 	
@@ -29,14 +29,14 @@ public class Score : MonoBehaviour {
 	public void SomarPonto(int _ponto)
 	{
 		ponto += _ponto;
-		guiText.text = "Pontos:   " + ponto;
+		GetComponent<GUIText>().text = "Pontos:   " + ponto;
 
 	}
 
 	public void TirarPonto(int _ponto)
 	{
 		ponto -= _ponto;
-		guiText.text = "Pontos:   " + ponto;
+		GetComponent<GUIText>().text = "Pontos:   " + ponto;
 		
 	}
 
