@@ -1672,10 +1672,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663b374d34bf3fa458ca673ffdc4b954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaAtual:
+  textureVida:
   - {fileID: 2800000, guid: eb0336d5ed41f644a91c676a342c442a, type: 3}
   - {fileID: 2800000, guid: a271ca5304d20b941be38beeaa1f1977, type: 3}
   - {fileID: 2800000, guid: c6acc29f0cb0b7f4990c159b9c9e95d2, type: 3}
+  - {fileID: 0}
+  vidasAtual: 0
 --- !u!1 &992010823
 GameObject:
   m_ObjectHideFlags: 0

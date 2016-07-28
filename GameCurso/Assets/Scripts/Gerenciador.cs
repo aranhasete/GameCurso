@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Gerenciador : MonoBehaviour {
 
@@ -45,10 +46,11 @@ public class Gerenciador : MonoBehaviour {
 
 	public void GameOver(string nome)
 	{
-
-		Application.LoadLevel (nome);
-
-	}
+        //#pragma warning disable CS0618 // O tipo ou membro é obsoleto
+        //		Application.LoadLevel (nome);
+        //#pragma warning restore CS0618 // O tipo ou membro é obsoleto
+        SceneManager.LoadScene(nome);
+    }
 
 
 	public void AddQuantidade(int quantidade)
@@ -58,7 +60,9 @@ public class Gerenciador : MonoBehaviour {
 
 	public void ProximoLevel(int level)
 	{
-
-		Application.LoadLevel (level);
-	}
+        //#pragma warning disable CS0618 // O tipo ou membro é obsoleto
+        //		Application.LoadLevel (level);
+        //#pragma warning restore CS0618 // O tipo ou membro é obsoleto
+        SceneManager.LoadScene(level);
+    }
 }
